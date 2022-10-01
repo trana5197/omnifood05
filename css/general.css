@@ -81,6 +81,10 @@ body {
   row-gap: 9.6rem;
 }
 
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -126,7 +130,7 @@ body {
   display: block;
   font-size: 1.6rem;
   color: #cf711f;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 1.6rem;
   text-transform: uppercase;
   letter-spacing: 0.75px;
@@ -190,7 +194,7 @@ body {
 }
 
 .margin-bottom-md {
-  margin-bottom: 4.8rem;
+  margin-bottom: 4.8rem !important;
 }
 
 .center-text {
