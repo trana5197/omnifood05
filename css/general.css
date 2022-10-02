@@ -34,7 +34,12 @@ Paragraph default: 1.6, 1.8
 #45260a
 
 - Accents: 
-- Greys: #555, #333, #6F6F6F(lightest grey allowed on #fdf2e9)
+- Greys:
+#888
+#767676 (lightest grey allowed on #fff) 
+#6F6F6F (lightest grey allowed on #fdf2e9)
+#555, 
+#333
 
 --- 05 SHADOWS
 
@@ -83,6 +88,10 @@ body {
   margin: 0 auto;
 }
 
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
 .grid {
   display: grid;
   column-gap: 6.4rem;
@@ -103,6 +112,10 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
