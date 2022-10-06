@@ -6,13 +6,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/general.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/queries.css">
 
   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script defer src="js/script.js"></script>
 
   <title>Omnifood</title>
 
@@ -29,13 +33,18 @@
 
     <nav class="main-nav">
       <ul class="main-nav-list">
-        <li><a class="main-nav-link" href="#">How it works</a></li>
-        <li><a class="main-nav-link" href="#">Meals</a></li>
-        <li><a class="main-nav-link" href="#">Testimonials</a></li>
-        <li><a class="main-nav-link" href="#">Pricing</a></li>
-        <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
+        <li><a class="main-nav-link" href="#how">How it works</a></li>
+        <li><a class="main-nav-link" href="#meals">Meals</a></li>
+        <li><a class="main-nav-link" href="#testimonials">Testimonials</a></li>
+        <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+        <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
       </ul>
     </nav>
+
+    <button class="btn-mobile-nav">
+      <ion-icon class="icon-mobile-nav" name="menu"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close"></ion-icon>
+    </button>
 
   </header>
 
@@ -60,8 +69,8 @@
             again.
             Tailored to your personal
             tastes and nutritional needs.</p>
-          <a href="#" class="btn btn--full margin-right-sm">Start eating well</a>
-          <a href="#" class="btn btn--outline">Learn more &darr;</a>
+          <a href="#cta" class="btn btn--full margin-right-sm">Start eating well</a>
+          <a href="#how" class="btn btn--outline">Learn more &darr;</a>
 
           <div class="delivered-meals">
 
@@ -115,7 +124,7 @@
     <!-- HOW IT WORKS SECTION -->
     <!-- ****************************************************** -->
 
-    <section class="section-how">
+    <section class="section-how" id="how">
 
       <div class="container">
 
@@ -173,7 +182,7 @@
     <!-- MEAL SECTION -->
     <!-- ****************************************************** -->
 
-    <section class="section-meals">
+    <section class="section-meals" id="meals">
 
       <div class="container center-text">
         <span class="subheading">Meals</span>
@@ -280,7 +289,7 @@
     <!-- ****************************************************** -->
     <!-- TESTIMONIALS SECTION -->
     <!-- ****************************************************** -->
-    <section class="section-testimonial">
+    <section class="section-testimonial" id="testimonials">
 
       <div class="testimonial-container">
 
@@ -386,7 +395,7 @@
     <!-- ****************************************************** -->
     <!-- Pricing + Features SECTION -->
     <!-- ****************************************************** -->
-    <section class="section-pricing">
+    <section class="section-pricing" id="pricing">
 
       <div class="container">
 
@@ -503,7 +512,7 @@
     <!-- ****************************************************** -->
     <!-- Call-To-Action SECTION -->
     <!-- ****************************************************** -->
-    <section class="section-cta">
+    <section class="section-cta" id="cta">
       <div class="container">
         <div class="cta">
 
@@ -550,6 +559,9 @@
     </section>
   </main>
 
+  <!-- ****************************************************** -->
+  <!-- FOOTER SECTION -->
+  <!-- ****************************************************** -->
 
   <footer class="footer">
 
@@ -568,7 +580,7 @@
               <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
             </a></li>
         </ul>
-        <p class="copyright">Copyright &copy; 2027 by Omnifood.Inc. All rights reserved. </p>
+        <p class="copyright">Copyright &copy; <span class="year">2027</span> by Omnifood.Inc. All rights reserved. </p>
       </div>
 
       <div class="address-col">
