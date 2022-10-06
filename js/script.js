@@ -1,4 +1,4 @@
-console.log("Hello World");
+// console.log("Hello World");
 
 const yearEl = document.querySelector(".year");
 yearEl.textContent = new Date().getFullYear();
@@ -34,8 +34,7 @@ btnNavEl.addEventListener("click", function () {
 // });
 
 const allLinks = document.querySelector(".main-nav-list");
-const footerLogoEl = document.querySelector(".footer-logo");
-const footerHref = footerLogoEl.getAttribute("href");
+const logoEl = document.querySelectorAll(".logoMain");
 
 allLinks.addEventListener("click", function (e) {
   // console.log(e.target);
@@ -51,12 +50,26 @@ allLinks.addEventListener("click", function (e) {
   }
 });
 
-footerLogoEl.addEventListener("click", function (e) {
-  e.preventDefault();
-  // console.log(footerHref);
-  if (footerHref === "#") {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+logoEl.forEach((logo) => {
+  logo.addEventListener("click", function (e) {
+    e.preventDefault();
+    const logoHref = logo.getAttribute("href");
+    console.log(logoHref);
+    if (logoHref === "#") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+});
+
+const btnLinkEl = document.querySelectorAll(".btn");
+btnLinkEl.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const hrefBtn = link.getAttribute("href");
+    if (hrefBtn.startsWith("#")) {
+      document.querySelector(hrefBtn).scrollIntoView({ behavior: "smooth" });
+    }
+  });
 });
 
 const sectionHeroEl = document.querySelector(".section-hero");
@@ -92,7 +105,7 @@ function checkFlexGap() {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
+  // console.log(isSupported);
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }

@@ -35,7 +35,7 @@
 
   <header class="header">
 
-    <a href="#"><img src="img/omnifood-logo.png" alt="Logo of omnifood" class="logo"></a>
+    <a href="#" class="logoMain"><img src="img/omnifood-logo.png" alt="Logo of omnifood" class="logo"></a>
 
     <nav class="main-nav">
       <ul class="main-nav-list">
@@ -533,20 +533,20 @@
               can
               cancel or pause anytime. And the first meal is on us!</p>
 
-            <form class="cta-form" action="#">
+            <form class="cta-form" name="sign-up" netlify>
               <div>
                 <label for="full-name">Full Name</label>
-                <input id="full-name" type="text" placeholder="John Smith" required>
+                <input name="full-name" id="full-name" type="text" placeholder="John Smith" required>
               </div>
 
               <div>
                 <label for="email">Email address</label>
-                <input id="email" type="email" placeholder="me@example.com" required>
+                <input name="email" id="email" type="email" placeholder="me@example.com" required>
               </div>
 
               <div>
                 <label for="select-where">Where did you here about us</label>
-                <select id="select-where" required>
+                <select name="select-where" id="select-where" required>
                   <option value="">Please choose one option:</option>
                   <option value="friends">Friends and family</option>
                   <option value="youtube">YouTube video</option>
@@ -579,7 +579,8 @@
     <div class="container grid grid--footer">
 
       <div class="logo-col">
-        <a href="#" class="footer-logo"><img src="img/omnifood-logo.png" alt="Logo of omnifood" class="logo"></a>
+        <a href="#" class="footer-logo logoMain"><img src="img/omnifood-logo.png" alt="Logo of omnifood"
+            class="logo"></a>
         <ul class="social-links">
           <li><a class="footer-link" href="#">
               <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
